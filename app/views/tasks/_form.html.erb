@@ -8,9 +8,17 @@
     </div>
   </div>
   <div class="row">
+
+    
     <div class="col-md-9 col-md-offset-1">
       <div class="form-group">
         <%= f.text_area :comment, row: 3, class: 'form-control', placeholder: "Any comment for task" %>
+      </div>
+    </div>
+    <div class="col-md-9 col-md-offset-1">
+      <div class="form-group">
+        <%= f.label :deadline %>
+        <%= f.date_select :deadline, class: 'form-control' %>
       </div>
     </div>
     <div class="col-md-1">

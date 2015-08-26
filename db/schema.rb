@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715083832) do
+ActiveRecord::Schema.define(version: 20150826174808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,6 @@ ActiveRecord::Schema.define(version: 20150715083832) do
     t.string   "comment"
     t.boolean  "complete",   default: false, null: false
     t.integer  "priority",   default: 0,     null: false
+    t.date     "deadline"
   end
-
 end

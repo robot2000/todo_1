@@ -7,6 +7,14 @@
       <%= label task, task.title %>
     </div>
     <div class="col-md-1">
+      <%= link_to '#', {class: "btn btn-xs priority", id: "#{dom_id(task, :up)}",remote: true, toggle: "tooltip", placement: "top", title: 'Up'} do %>
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      <% end %>
+      <%= link_to '#', {class: "btn btn-xs priority", id: "#{dom_id(task, :down)}", remote: true, toggle: "tooltip", placement: "top", title: 'Down'} do %>
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      <% end %>
+    </div>
+    <div class="col-md-1">
       <%= link_to [:edit, task.project, task], class: "btn btn-md", remote: true, toggle: "tooltip", placement: "top", title: 'Edit' do %>
       <span class="glyphicon glyphicon-pencil"></span>
       <% end %>
@@ -14,14 +22,6 @@
     <div class="col-md-1">
       <%= link_to [task.project, task], method: :delete, class: "btn btn-md", remote: true, toggle: "tooltip", placement: "top", title: 'Delete' do %>
       <span class="glyphicon glyphicon-trash"></span>
-      <% end %>
-    </div>
-    <div class="col-md-1">
-      <%= link_to '#', {class: "btn btn-xs priority", id: "#{dom_id(task, :up)}",remote: true, toggle: "tooltip", placement: "top", title: 'Up'} do %>
-      <span class="glyphicon glyphicon-chevron-up"></span>
-      <% end %>
-      <%= link_to '#', {class: "btn btn-xs priority", id: "#{dom_id(task, :down)}", remote: true, toggle: "tooltip", placement: "top", title: 'Down'} do %>
-      <span class="glyphicon glyphicon-chevron-down"></span>
       <% end %>
     </div>
   </div>
