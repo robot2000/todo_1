@@ -23,7 +23,11 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+gem 'rails_12factor', group: :production
+
 group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
 end
+
+ruby '2.2.1'
