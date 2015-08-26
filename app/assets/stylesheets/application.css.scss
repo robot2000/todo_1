@@ -34,5 +34,9 @@ div#errors {
 
 
 .list-group-item {
-border-bottom-width: 0px;
+  border-bottom-width: 0px;
+  :hover {
+    background-color: #faf8b5;
+    cursor: pointer;
+  }
 }
