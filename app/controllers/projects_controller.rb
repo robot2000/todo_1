@@ -5,11 +5,12 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = current_user.projects
   end
 
   def create
     @project = Project.create(project_params)
+    @project.user = current_user
 
     respond_to do |format|
       if @project.save
@@ -37,6 +38,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title)
+    params.require(:project).permit(:title, :user_id)
   end
 end
