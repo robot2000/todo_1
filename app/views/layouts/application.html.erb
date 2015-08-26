@@ -8,6 +8,13 @@
   </head>
 
   <body>
+    <div class="pull-right">
+      <% if !current_user %>
+        <%= link_to 'Sign In', new_user_session_path, id: 'sign_in' %>
+      <% else %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, id: 'sign_out' %>
+      <% end %>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
