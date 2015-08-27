@@ -20,7 +20,7 @@
           <%= f.text_field :title, class: "form-control", plaseholder: 'Enter title for project' %>
         </div>
         <div class="col-md-1">
-          <%= f.submit [project], remote: true, class: "btn btn-inverse btn-md", toggle: "modal", target: 'myModal', placement: "top", title: 'Save project' do %>
+          <%= f.submit remote: true, class: "btn btn-inverse btn-md", toggle: "modal", target: 'myModal', placement: "top", title: 'Save project' do %>
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           <% end %>
         </div>
