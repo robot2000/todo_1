@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="row-fluid">
+      <div class="span10 offset1">
+        <div class="hero-unit text-center">
+          <div class="page-header">
+            <h2><b>SIMPLE TODO LIST</b>
+            <p><small>FROM RUBY GARAGE</small></h2></p>
+          </div>
+          <div class="span4 offset4">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
