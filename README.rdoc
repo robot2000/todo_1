@@ -5,23 +5,28 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.2.1
 
-* System dependencies
+* Database Postgresql
 
-* Configuration
+* Deployment instructions:
 
-* Database creation
+1. Clone app to folder
 
-* Database initialization
+2. Run to: $ bundle install
 
-* How to run the test suite
+3. Create the database: $ rake db:create
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Run migrations: $ rake db:migrate
 
-* Deployment instructions
+5. Run app: $ rails server
 
-* ...
+6. Enjoy!
+
+
+DEMO VERSION safe-anchorage-6807.herokuapp.com
+
+https://safe-anchorage-6807.herokuapp.com
 
 
 Please feel free to use a different markup language if you do not plan to run
